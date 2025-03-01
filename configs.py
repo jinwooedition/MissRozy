@@ -29,8 +29,8 @@ if HAS_SSL:
 else:
     URL = "http://{}/".format(FQDN)
 UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', None))
-BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001987654567")).split())) 
-STREAM_LOGS = environ.get('STREAM_LOGS','-1001895607162')
+BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", None)).split())) 
+STREAM_LOGS = environ.get('STREAM_LOGS', None)
 SESSION = environ.get('SESSION','MissRozy')
 CUSTOM_CAPTION = environ.get('CUSTOM_CAPTION')
 
